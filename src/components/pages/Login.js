@@ -1,4 +1,4 @@
-import { useReducer, useState } from "react";
+import { useReducer, useState,useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthData } from "../../auth/AuthWrapper";
 
@@ -22,6 +22,10 @@ export const Login = () => {
     }
   };
 
+  useEffect(() => {
+    // This will cause an error when the component mounts
+    throw new Error('I crashed!');
+}, []);
   return (
     <div className="page">
       <h2>Login page</h2>
